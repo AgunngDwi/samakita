@@ -1,0 +1,85 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.logo-navbar{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    gap: 10px;
+    font-weight: 700;
+    font-style: italic;
+    color: #273b7a;
+
+}
+.logo-navbar span{
+    color: #ffc61b;
+}
+
+.list-navbar{
+    display: flex;
+    align-items:center;
+    gap: 15px;
+}
+
+.list-navbar a:hover{
+    color: #ffc61b;
+    transition: 0.2s;
+}
+
+.list-navbar a::after{
+    content: "";
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #ffc61b;
+    transform: scaleX(0);
+    transition: 0.1s linear;
+}
+
+.list-navbar a:hover::after{
+    transform: scaleX(0.7);
+}
+
+.list-navbar a{
+    text-decoration: none;
+    font-size: 18px ;
+    color: #273b7a;
+    font-weight: 700;
+}
+
+.user-warp{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-warp button{
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+button.login{
+    background-color: #273b7a;
+    color: #ffc61b;
+    font-weight: 700;
+}
+
+button.register{
+    background-color: #ffc61b;
+    color: #273b7a;
+    font-weight: 700;
+}
+
+button.login:hover{
+    background-color: #2449c2;
+}
+
+button.register:hover{
+    background-color: #e2ab07;  
+}
+
