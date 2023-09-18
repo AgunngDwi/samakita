@@ -1,0 +1,27 @@
+.about-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 50px 150px;
+}
+
+.about-content h3{
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.about-content p{
+    font-size: 20px;
+}
+
+.detail{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
