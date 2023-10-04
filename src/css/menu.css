@@ -1,0 +1,80 @@
+.menu-container{
+    display: flex;
+    margin: 100px 40px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 40px;
+    justify-content: space-between;
+}
+
+/* .recommended-menu{
+    display: flex;
+} */
+
+.carousel{
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner{
+    display: flex;
+    transition: transform 0.3 ease;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.menu-title{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.menu-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-height: 230px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 14px;
+    margin: 10px 0;
+    height: 80px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}

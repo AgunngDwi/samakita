@@ -15,7 +15,7 @@ const NavbarMain = () => {
         </p>
       </div>
       <div className="list-navbar">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#contact">Contact</a>

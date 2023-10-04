@@ -1,0 +1,58 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 40px 0 ;
+    margin-top: 100px;
+    border-top: 2px solid #ffc61b ;
+    max-height: 200px;
+}
+
+.imageFooter{
+    max-width: 30%;
+}
+
+.contact {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact p{
+    margin-bottom: 5px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.link a{
+    text-decoration: none;
+    color: gray;
+}
+
+
+.title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.icon{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.icon a{
+    color: #273b7a;
+    cursor: pointer;
+}
+
+.icon a:hover{
+    color: #ffc61b;
+}
+
+
+
