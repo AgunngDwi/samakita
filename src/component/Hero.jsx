@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import heroImg from "../assets/homepage/heroImg.jpg";
 import "../css/hero.css";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="hero-container" id="#">
       <div className="hero-title">
@@ -11,7 +14,13 @@ const Hero = () => {
           blanditiis, dicta laboriosam corrupti odio, eveniet excepturi quasi,
           provident ratione qui illo vero doloremque doloribus fugit.
         </p>
-        <button>Order Here</button>
+        <button
+          onClick={() => {
+            navigate("/menu");
+          }}
+        >
+          Order Here
+        </button>
       </div>
     </div>
   );

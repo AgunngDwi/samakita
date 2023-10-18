@@ -1,7 +1,7 @@
 import logo from "../assets/homepage/logo.svg";
 import "../css/navbar.css";
 
-const NavbarMain = () => {
+const NavbarMain = ({ btnVis }) => {
   return (
     <div className="navbar-container">
       <div className="logo-navbar">
@@ -20,10 +20,27 @@ const NavbarMain = () => {
         <a href="#menu">Menu</a>
         <a href="#contact">Contact</a>
       </div>
-      <div className="user-warp">
-        <button className="login">Login</button>
-        <button className="register">Register</button>
-      </div>
+      {!btnVis ? (
+        <div className="user-warp">
+          <button className="login">Login</button>
+          <button className="register">Register</button>
+        </div>
+      ) : (
+        <div className="user-warp">
+          <h1></h1>
+          <button
+            style={{
+              backgroundColor: "red",
+              fontWeight: "700",
+            }}
+          >
+            Logout
+          </button>
+          <button
+            style={{ border: "transparent", backgroundColor: "transparent" }}
+          ></button>
+        </div>
+      )}
     </div>
   );
 };

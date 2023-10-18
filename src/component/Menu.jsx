@@ -30,7 +30,13 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <div className="menu-title">
-        <h3>Signature</h3>
+        <h3
+          style={{
+            fontFamily: " Great Vibes, cursive",
+          }}
+        >
+          Signature
+        </h3>
       </div>
       <div className="carousel">
         <div className="carousel-inner">
@@ -38,12 +44,7 @@ const Menu = () => {
             .slice(currentIndex, currentIndex + visibleMenu)
             .map((item, id) => (
               <div key={id} className="menu-card">
-                <img
-                  style={{ width: "50px", height: "50px" }}
-                  src={item.imageUrl}
-                  alt=""
-                  className="card-image"
-                />
+                <img src={item.imageUrl} alt="" className="card-image" />
                 <div className="menu-content">
                   <h4 className="name">{item.name}</h4>
                   <p className="description">{item.description}</p>
@@ -54,10 +55,10 @@ const Menu = () => {
         </div>
         <div className="button-group">
           <button className="carousel-button left" onClick={handlePrevClick}>
-            Previous
+            <i class="fa-solid fa-arrow-left"></i>
           </button>
           <button className="carousel-button right" onClick={handleNextClick}>
-            Next
+            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
