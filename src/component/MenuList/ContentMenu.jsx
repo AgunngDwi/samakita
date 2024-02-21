@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMenus } from "../../redux/actions/menuAction";
+import Popup from "../MenuList/CheckModal";
 import "../../css/contentMenu.css";
 
 const ContentMenu = () => {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.menuReducer);
   const [selectedMenus, setSelectedMenus] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     dispatch(getMenus());
@@ -43,6 +45,14 @@ const ContentMenu = () => {
   const totalPrice = selectedMenus.reduce((total, selectedMenu) => {
     return total + selectedMenu.price * selectedMenu.count;
   }, 0);
+
+  const handleConfirm = () => {
+    setShowPopup(true);
+  };
+
+  const handleClose = () => {
+    setShowPopup(false);
+  };
 
   return (
     <div className="content-container">
@@ -128,11 +138,14 @@ const ContentMenu = () => {
                 <p>Total Price</p>
                 <p>{totalPrice}K</p>
               </div>
-              <button className="total-button">Konfirmasi Pesanan</button>
+              <button className="total-button" onClick={handleConfirm}>
+                Konfirmasi Pesanan
+              </button>
             </div>
           ) : null}
         </div>
       </div>
+      <Popup handleClose={handleClose} show={showPopup} />
     </div>
   );
 };

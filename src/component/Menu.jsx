@@ -28,7 +28,7 @@ const Menu = () => {
   console.log(data);
 
   return (
-    <div className="menu-container">
+    <div className="menu-container" id="menu">
       <div className="menu-title">
         <h3
           style={{

@@ -1,0 +1,63 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    height: 300px;
+}
+
+.icon-note{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.close-button{
+    width: 40%;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.confirm-button{
+    width: 40%;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.close-button:hover{
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+}
+
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}

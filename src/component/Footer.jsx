@@ -5,7 +5,7 @@ import logoFooter from "../assets/homepage/logo.svg";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container" id="contact">
       <div className="contact">
         <p>agungdwilaksono60@gmail.com</p>
         <p>(+62) 812-8694-1914</p>
