@@ -9,12 +9,17 @@ const ContentMenu = () => {
   const { data } = useSelector((state) => state.menuReducer);
   const [selectedMenus, setSelectedMenus] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     dispatch(getMenus());
   }, []);
 
   const handleSelectMenu = (menu) => {
+    if (!token) {
+      alert("Silahkan Login Terlebih dahulu");
+      return;
+    }
     const existingMenu = selectedMenus.find((item) => item.id === menu.id);
     if (existingMenu) {
       const updatedMenus = selectedMenus.map((item) =>

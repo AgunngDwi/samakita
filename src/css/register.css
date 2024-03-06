@@ -1,16 +1,16 @@
-.login-container{
+.register-container{
     background-color:#ffc61b;
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-image: url(/src/assets/homepage/heroImg.jpg);
+    background-image: url(/src/assets/homepage/pizza.jpg);
 }
 
-.login-wrapper{
+.register-wrapper{
     position: absolute;
     top:50%;
     left: 50%;
-    height: 400px;
+    height: 500px;
     width: 400px;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
@@ -23,27 +23,27 @@
     flex-direction: column;
 }
 
-.sub-login{
+.sub-register{
     margin: 15px 30px;
     width: 300px;
     font-weight: 700;
 }
 
-.button-login{
+.button-register{
     width: 50%;
     font-size: 15px;
     height: 9%;
     margin-top: 15px;
-    color: #ffc61b;
-    background-color: #273b7a;
+    color: #273b7a;
+    background-color: #ffc61b;
     font-weight: 700;
     border: transparent;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.button-login:hover{
-    background-color: #2449c2;
+.button-register:hover{
+    background-color: #e2ab07;
     transition: 0.2s;
 }
 

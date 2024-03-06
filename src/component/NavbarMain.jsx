@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 const NavbarMain = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role");
+
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.reload(false);
+  };
 
   return (
     <div className="navbar-container">
@@ -24,27 +31,32 @@ const NavbarMain = () => {
         <a href="#contact">Contact</a>
       </div>
 
-      <div className="user-warp">
-        <button className="login" onClick={() => navigate("/login")}>
-          Login
-        </button>
-        <button className="register">Register</button>
-      </div>
+      {!token ? (
+        <div className="user-warp">
+          <button className="login" onClick={() => navigate("/login")}>
+            Login
+          </button>
+          <button className="register" onClick={() => navigate("/register")}>
+            Register
+          </button>
+        </div>
+      ) : (
+        <div className="user-warp">
+          <p
+            style={{
+              fontSize: "15px",
+              fontWeight: "700",
+              marginRight: "7px",
+            }}
+          >
+            Hello {role}
+          </p>
 
-      {/* <div className="user-warp">
-        <h1></h1>
-        <button
-          style={{
-            backgroundColor: "red",
-            fontWeight: "700",
-          }}
-        >
-          Logout
-        </button>
-        <button
-          style={{ border: "transparent", backgroundColor: "transparent" }}
-        ></button>
-      </div> */}
+          <button className="logout" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };

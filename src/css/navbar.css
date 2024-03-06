@@ -87,3 +87,12 @@ button.register:hover{
     background-color: #e2ab07;  
 }
 
+button.logout{
+    background-color: red;
+    font-weight: 700;
+    
+}
+
+button.logout:hover{
+    background-color: rgb(234, 18, 18);
+}
